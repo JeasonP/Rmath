@@ -4,8 +4,8 @@
 
     工作表，工作簿的概念，从第二行“ctrl + shift + ↓”     选中该行向下整列（没有空单元格可以这样选），并且跳转到最后一列，行也是同理；
     “文件->选项”中各种功能的使用，“文件->信息”中详细信息的定义，
-![avatar](table_basis.png)    
-![avatar](table_basis0.png)
+![avatar](pic/table_basis.png)
+![avatar](pic/table_basis0.png)
     然后还有一些基本的技巧;
     1.使用定位条件方法选择特定条件区域
     选中空单元格
@@ -58,7 +58,7 @@
     9.保护某个单元格不能被修改或者编辑
     在“审阅”设置中：
     注意保护工作表和保护工作簿的区别，保护工作簿包括这个页面下所有的表的数量已成定局，不能增删改查，保护工作表就是单张工作表中不能再增删改查数据；
-    要设置某些单元格不能被编辑，需要再“开始->对齐”的对话框启动器中找到保护即可，但要注意要同时开启工作表保护
+    要设置某些单元格不能被编辑，需要在对话框启动器中找到“保护”选项，然后将“锁定”复选框取消掉对勾即可，但要注意要同时开启工作表保护，才能让其他的单元格受到保护
 
     10.冻结首行
     就是在表格向下滑动时第一行置顶，不会消失
@@ -103,9 +103,8 @@
     [=0]"男";[=1]"女"                   表示输入“0”表示“男”，输入“1”显示“女”
     [=0]"✔";[=1]"✘"                   表示输入“0”表示“✔”，输入“1”显示“✘”
     详情表：
-![avatar](datadef0.png)
-![avatar](datadef1.png)
-    
+![avatar](pic/datadef0.png)
+![avatar](pic/datadef1.png)
     2.导入外部的数据
     在“数据”中选择你所要导入的源文件，然后经过一些设置之后就可以完美导入excel
 
@@ -140,16 +139,16 @@
     1.日期分列
     要注意“公式”中计算选项的“自动和手动”的区别。
     调薪求和
-![avatar](gongshi0.png)
-![avatar](gongshi1.png)
-![avatar](gongshi2.png)
-![avatar](changliang.png)
-![avatar](yunsuanfu0.png)
-![avatar](yunsuanfu1.png)
-![avatar](yunsuanfu2.png)
-![avatar](yunsuanfu3.png)
-![avatar](gongshi3.png)
-![avatar](caltable.png)
+![avatar](pic/gongshi0.png)
+![avatar](pic/gongshi1.png)
+![avatar](pic/gongshi2.png)
+![avatar](pic/changliang.png)
+![avatar](pic/yunsuanfu0.png)
+![avatar](pic/yunsuanfu1.png)
+![avatar](pic/yunsuanfu2.png)
+![avatar](pic/yunsuanfu3.png)
+![avatar](pic/gongshi3.png)
+![avatar](pic/caltable.png)
 
     2.乘法口诀表
     首先建立横向和列项的一到九，然后输入公式即可
@@ -163,8 +162,8 @@
 ## 第五节 Excel常用函数
 
     1.函数错误类型及信息
-![avatar](error.png)
-![avatar](error0.png)
+![avatar](pic/error.png)
+![avatar](pic/error0.png)
 
     2.跨工作表和工作簿的计算
 
@@ -177,22 +176,21 @@
     如：=A116&B116，就可以把一列数据整合成一个单元格的数据
 
     4.函数
-![avatar](hanshu.png)
-![avatar](hanshu0.png)
-![avatar](hanshu1.png)
-![avatar](hanshu2.png)
-![avatar](hanshu3.png)
-![avatar](hanshu4.png)
-![avatar](hanshu5.png)
-![avatar](hanshu6.png)
-![avatar](hanshu7.png)
+![avatar](pic/hanshu.png)
+![avatar](pic/hanshu0.png)
+![avatar](pic/hanshu1.png)
+![avatar](pic/hanshu2.png)
+![avatar](pic/hanshu4.png)
+![avatar](pic/hanshu5.png)
+![avatar](pic/hanshu6.png)
+![avatar](pic/hanshu7.png)
 
     5.判断成绩是否合格
     使用“if()”函数和and()函数的组合
     对四种问题进行判断，需要三个if()函数来判断
 
     6.图表类型
-![avatar](chart_type2.png)
-![avatar](chart_type3.png)
+![avatar](pic/chart_type2.png)
+![avatar](pic/chart_type3.png)
 
     7.图片背景改变

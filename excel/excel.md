@@ -46,15 +46,15 @@
      公式：公式计算位于核心地位，主要是建立数据之间的关联，然后计算
      公式的组成部分：函数，引用，常量，运算符
      引用：相对引用，绝对引用，混合引用
-![avatar](gongshi2.png)
+![avatar](pic/gongshi2.png)
      公式中数据的颜色就是单元格的颜色，这样便于区分
-    ![avatar](changliang.png)
+    ![avatar](pic/changliang.png)
     错误信息：
- ![avatar](error.png)
-  ![avatar](error0.png)
+ ![avatar](pic/error.png)
+  ![avatar](pic/error0.png)
 
   图表类型
-    ![avatar](chart_type2.png)
+    ![avatar](pic/chart_type2.png)
 
 ### 三、基本技巧
 
@@ -211,3 +211,14 @@
 
     33.怎样选中指定的单元格
     在左上角的名称框中输入单元格地址或者多个单元格地址，然后就可以直接选中。
+
+![avatar](pic/changliang.png)
+
+    34.设置显示行列标
+    在“页面布局->查看”中可以看到。同时也可以选择是否显示网格线。
+
+    35.Excel2016，表格里每隔几行的虚线怎么去掉？
+    这个虚线实际上是分页符，就是横向的分页符，可以在“文件->选项->高级->此工作表的显示选项->显示分页符”的复选框去掉即可。
+
+    36.Excel给汉字加拼音
+    在“开始中”
