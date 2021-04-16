@@ -1,5 +1,21 @@
 # EXCEL数据分析（分析、公式、函数、可视化）
 
+## 目录
+
+[第一节](#第一节-excel数据分析概述)
+
+[第二节](#第二节-excel数据处理技巧)
+
+[第三节](#第三节-excel数据收集与整合)
+
+[第四节](#第四节-excel公式介绍)
+
+[第五节](#第五节-excel常用函数)
+
+## 常用的重点
+
+[函数](#jump)
+
 ## 第一节 Excel数据分析概述
 
     工作表，工作簿的概念，从第二行“ctrl + shift + ↓”     选中该行向下整列（没有空单元格可以这样选），并且跳转到最后一列，行也是同理；
@@ -136,18 +152,31 @@
 
 ![avatar](pic/gongshi.png)
 
+<a id = "jump"></a>
     1.日期分列
+
     要注意“公式”中计算选项的“自动和手动”的区别。
+
     调薪求和
+
 ![avatar](pic/gongshi0.png)
+
 ![avatar](pic/gongshi1.png)
+
 ![avatar](pic/gongshi2.png)
+
 ![avatar](pic/changliang.png)
+
 ![avatar](pic/yunsuanfu0.png)
+
 ![avatar](pic/yunsuanfu1.png)
+
 ![avatar](pic/yunsuanfu2.png)
+
 ![avatar](pic/yunsuanfu3.png)
+
 ![avatar](pic/gongshi3.png)
+
 ![avatar](pic/caltable.png)
 
     2.乘法口诀表
@@ -162,7 +191,9 @@
 ## 第五节 Excel常用函数
 
     1.函数错误类型及信息
+
 ![avatar](pic/error.png)
+
 ![avatar](pic/error0.png)
 
     2.跨工作表和工作簿的计算
@@ -176,13 +207,21 @@
     如：=A116&B116，就可以把一列数据整合成一个单元格的数据
 
     4.函数
+
 ![avatar](pic/hanshu.png)
+
 ![avatar](pic/hanshu0.png)
+
 ![avatar](pic/hanshu1.png)
+
 ![avatar](pic/hanshu2.png)
+
 ![avatar](pic/hanshu4.png)
+
 ![avatar](pic/hanshu5.png)
+
 ![avatar](pic/hanshu6.png)
+
 ![avatar](pic/hanshu7.png)
 
     5.判断成绩是否合格
@@ -190,7 +229,9 @@
     对四种问题进行判断，需要三个if()函数来判断
 
     6.图表类型
+
 ![avatar](pic/chart_type2.png)
+
 ![avatar](pic/chart_type3.png)
 
     7.图片背景改变
