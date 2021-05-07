@@ -1,0 +1,33 @@
+IML(Interactive Matrix Language    交互式矩阵语言
+	
+	SAS程序:
+proc iml;
+	X = {1 2 3 4 5,
+		2 4 7 8 9,
+		3 7 10 15 20,
+		4 8 15 30 20,
+		5 9 20 20 40};
+	nijuzhen  = inv(X);
+	tezhengzhi = eigval(X);
+	tzxl = eigvec(X);
+	hangls = det(X);
+	ji = trace(X);
+print nijuzhen tezhengzhi tzxl hangls ji;    
+
+DATA MYDATA1;
+input @1 COL1 4.2	@7 COL2 3.1; 
+Add_result = COL1+COL2;
+Sub_result = COL1-COL2;
+Mult_result = COL1*COL2;
+Div_result = COL1/COL2;
+Expo_result = COL1**COL2;
+datalines;
+11.21 5.3
+3.11  11
+;
+PROC PRINT DATA=MYDATA1;
+RUN;
+
+PROC PRINT DATA = data_set;
+OPTIONS;
+RUN;
