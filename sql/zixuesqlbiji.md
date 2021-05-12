@@ -1,6 +1,8 @@
 # 自学SQL刷题笔记
 
-网站地址[SQLBolt](https://sqlbolt.com/lesson/select_queries_introduction)
+[网站地址英文版SQLBolt](https://sqlbolt.com/lesson/select_queries_introduction)
+
+[网站地址中文版](http://xuesql.cn/)
 
 ## lesson 1
 
