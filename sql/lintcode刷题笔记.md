@@ -229,16 +229,29 @@ online_class_situations 表展示了一些同学上网课的行为活动。
 每行数据记录了一名同学在退出网课之前，当天使用同一台设备登录课程后听过的课程数目（可能是0个）。
 写一条 SQL 语句，查询每位同学第一次登录平台听课的设备ID (device_id)。
 
-    select student_id , device_id from online_class_situations
-    where date in
-        (
-        select min(date) from 
-        (
-            select * from online_class_situations 
-        where course_number != 0
-        )  a 
-        
-        group by student_id
-        );
+    SELECT DISTINCT
+        student_id,
+        min(device_id)  AS device_id
+    FROM 
+        online_class_situations
+    WHERE
+        course_number > 0
+
+
+    GROUP BY
+        student_id
+
+## 1913 · 查询学生学籍信息（多表连接）
+
+编写一个 SQL 语句，满足条件：无论 students 是否有学籍 (enrollments) 信息，学生都需要根据如下两个表提供以下信息：
+
+* student_name,
+* phone,
+* hometown,
+* address
+  
+    select s.student_name, s.phone, e.hometown, e.address
+    from students as s
+    left join enrollments as e on s.id = e.student_id;
 
 ## 
