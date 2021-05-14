@@ -175,7 +175,26 @@ SQL集数据查询、数据操纵、数据定义、和数据定义功能于一�
 ![avatar](pic/xiugai_table.png)
 
 MySQL修改字段的数据类型时使用modify
+
 MySQL修改字段的名称时使用change
+
+在mysql中，可以通过
+
+    “ALTER TABLE 旧表名 RENAME 新表名;”
+
+语句来修改表名，通过
+
+    “ALTER TABLE 表名 CHANGE 旧字段名/列名 新字段名/列名 新数据类型;”
+
+语句来修改列名。
+
+MySQL 中修改表字段名的语法规则如下：
+
+    ALTER TABLE <表名> CHANGE <旧字段名> <新字段名> <新数据类型>;
+
+MySQL 通过 ALTER TABLE 语句来实现表名的修改
+
+CHANGE 也可以只修改数据类型，实现和 MODIFY 同样的效果，方法是将 SQL 语句中的“新字段名”和“旧字段名”设置为相同的名称，只改变“数据类型”。
 
 3.索引的定义、修改与删除
 
@@ -408,7 +427,7 @@ insert into table_name[属性列] values(常量1(,常量2，...))
 
 触发器说明：
 
-![avatar](pic/trigger_intro.png
+![avatar](pic/trigger_intro.png)
 
 触发器实例：
 
