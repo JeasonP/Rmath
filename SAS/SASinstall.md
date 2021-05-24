@@ -54,7 +54,7 @@
 1. 在 VirtualBox 中，选择 SAS University Edition vApp，然后选择“Machine > Start”（机器>开始）。虚拟机可能需要几分钟才能启动。
 注意：虚拟机运行时，带有 SAS 徽标的界面将被替换为黑色的控制台界面（即“欢迎”窗口）。您可以最小化此窗口，但是在准备好结束 SAS 会话之前，请不要关闭“欢迎”窗口。
 
-2. 在本地计算机上的 Web 浏览器中，输入 http://localhost:10080。
+2. 在本地计算机上的 Web 浏览器中，输入 [这个网站](http://localhost:10080)。
 
 3. 在 SAS 大学版：信息中心中，单击“启动 SAS Studio”.
 

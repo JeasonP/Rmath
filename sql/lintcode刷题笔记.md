@@ -236,8 +236,6 @@ online_class_situations 表展示了一些同学上网课的行为活动。
         online_class_situations
     WHERE
         course_number > 0
-
-
     GROUP BY
         student_id
 
@@ -254,4 +252,67 @@ online_class_situations 表展示了一些同学上网课的行为活动。
     from students as s
     left join enrollments as e on s.id = e.student_id;
 
-## 
+## 一个表中有，另一个表中没有的
+
+    select a.* from a 
+    left join b 
+    on (a.id=b.id) 
+    where b.id is NULL
+
+## 简历投递 ⅱ
+
+students 表存储了所有学生的信息，包括学生 id 和学生姓名 name companies 表存储了所有公司的信息，包括公司 id 、公司名称 name 和 公司地址 address records 表存储了所有的简历投递数据，包括学生 id (student_id) 和 公司 id (company_id) 请编写 SQL 语句，查询接收简历最多的公司名称和地址。
+
+    select name, address 
+    from 
+        companies 
+    where id in 
+        (select company_id 
+            from 
+                records 
+            group by 
+                company_id 
+            having count(student_id)
+            =
+            (select max(c.count_c) 
+            from  
+                (select count(student_id) as count_c 
+                from 
+                    records 
+                group by 
+                    company_id) c));
+凡是在group by后面出现的字段，必须同时在select后面出现；凡是在select后面出现的、同时未在聚合函数中出现的字段，必须同时出现在group by后面，检查sql是否符合上述法则，当然，出现group by时，如果select后边有主键，group by逐渐也是可以的，只是此时group by好像也没起到什么作用
+
+## 挂科最多的同学 II
+
+exams 表中存放着同学们的考试记录 请用 SQL 语句，找到挂科数最多的同学所对应的 student_id
+
+    SELECT student_id from( SELECT student_id,count(id) as c from exams WHERE is_pass = 0 GROUP BY student_id HAVING c= (SELECT max(c) from (SELECT student_id,count(id) as c from exams WHERE is_pass = 0 GROUP BY student_id ) as b) ) as t
+
+1946 · 俱乐部年度比赛得分排名 II
+
+rankings 表记录了某俱乐部年度比赛的排名及得分信息，包括项目 id (category_id)，年份 (year)，排名 (rank) 以及分数 (score) categories 表记录了项目的名称 (name) 请编写 SQL 语句，查询 rankings 表和 categories 表中所有项目对应的项目名称 (name)、该项目平均分数 (average_score) 平均分数需要保留两位小数
+
+    select t2.name,round(AVG(t1.score),2) average_score
+    from 
+    rankings t1 inner join categories t2 on t1.category_id = t2.id 
+    group by t2.name
+    order by average_score desc;
+
+## 1943 · 寻找特定身高的同学
+
+student_heights 表记录着同学们的身高，其中包括很多重复的身高 请编写一个 SQL 语句，在只出现过一次的身高中，找出最高的身高
+
+    select max(a) height from (
+    select max(height) a from student_heights
+    group by height
+    having count(height) = 1 
+    ) v;
+
+## 1942 · 相距最近的两棵树苗
+
+某处新种植有一些距离不等的树苗，已知这些树苗和一个大的浇水桶都在一条直线上 sapling_distances 表存储了一些树苗到浇水桶的距离 (distance) 请编写一个 SQL 语句，找到最近的两棵树苗的距离 (shortest_distance)。
+
+    select MIN(s1.distance - s2.distance) as shortest_distance from 
+    sapling_distances as s1 inner join sapling_distances as s2 
+    where/on s1.distance >s2.distance having shortest_distance !="None";
